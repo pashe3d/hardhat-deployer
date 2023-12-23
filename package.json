@@ -1,0 +1,25 @@
+{
+  "name": "sepolia-testnet-deployment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy-uniswap": " npx hardhat run deployments/deploy-uniswap.ts --network sepolia ",
+    "deploy-erc20": " npx hardhat run deployments/deploy-erc20.ts --network sepolia "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.19.2",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "dotenv": "^16.3.1"
+  }
+}
