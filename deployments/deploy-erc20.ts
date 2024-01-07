@@ -6,8 +6,11 @@ function eth(number: number) {
 }
 
 async function main() {
-    const Token = await ethers.getContractFactory("Token")
-    const token = await Token.deploy(eth(1000))
+    let signer = await ethers.getSigner()
+    let nonce = await ethers.provider.getTransactionCount(signer.address);
+
+    const Token = await ethers.getContractFactory("MyERC20Token")
+    const token = await Token.deploy("WAY","WAY",{nonce:nonce})
     await token.deployed();
 
     return {

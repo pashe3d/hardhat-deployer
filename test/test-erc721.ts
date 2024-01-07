@@ -7,7 +7,7 @@ function eth(number: number) {
 
 async function main() {
     let signer = await ethers.getSigner()
-
+    let nonce = await ethers.provider.getTransactionCount(signer.address);
     const myNFTToken = await ethers.getContractAt(
         MyNFTToken.abi,
         "0x737209fb3e04B9259F3108D358EE7A848AC2fd3f",
@@ -17,10 +17,11 @@ async function main() {
     const owner = await myNFTToken.owner()
     const nft = await myNFTToken.safeMint(
         signer.address,
-        1,
-        "https://ipfs.io/ipfs/QmU1fFJj7K8DB3WG6yW2q5CPPV4TLksBRfCTV8BUzKd8pr",
+        2,
+        "https://ipfs.io/ipfs/QmYDBcfNSPLVnPAjoADpkc1ZdhK1AFEfyXY52AWpuHtaCT",
+        {nonce:nonce}
     )
-    console.log(nft)
+    console.log(nft.hash)
 
 
 }

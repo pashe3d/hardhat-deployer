@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy-uniswap": " npx hardhat run deployments/deploy-uniswap.ts --network sepolia ",
-    "deploy-erc20": " npx hardhat run deployments/deploy-erc20.ts --network sepolia ",
+    "deploy-erc20": " npx hardhat run deployments/deploy-erc20.ts --network tbsc ",
     "deploy-erc721": " npx hardhat run deployments/deploy-erc721.ts --network sepolia ",
     "test-safemint-erc721": " npx hardhat run test/test-erc721.ts --network sepolia "
   },
@@ -15,8 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.2.3",
-    "ethers": "^5.7.2",
-    "hardhat": "^2.19.2",
+    "hardhat": "^2.19.4",
     "ts-node": "^10.9.2"
   },
   "dependencies": {

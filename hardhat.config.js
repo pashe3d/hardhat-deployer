@@ -8,9 +8,15 @@ module.exports = {
         compilers: [
             {
                 version: "0.6.6",
+                settings: {
+                    optimizer: {enabled: true, runs: 1000000}
+                }
             },
             {
                 version: "0.8.20",
+                settings: {
+                    optimizer: {enabled: true, runs: 1000000}
+                },
             },
         ],
     },
@@ -19,8 +25,12 @@ module.exports = {
         hardhat: {},
         sepolia: {
             url: API_URL,
-            gas: 30_000_000,
-            gasLimit: 30_000_000,
+            gasPrice:30000000000,
+            accounts: [`0x${PRIVATE_KEY}`]
+        },
+        tbsc: {
+            url: "https://bsc-testnet.public.blastapi.io",
+            gasPrice:30000000000,
             accounts: [`0x${PRIVATE_KEY}`]
         }
     },
