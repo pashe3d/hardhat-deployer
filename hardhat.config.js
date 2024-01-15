@@ -25,7 +25,8 @@ module.exports = {
         hardhat: {},
         sepolia: {
             url: API_URL,
-            gasPrice:30000000000,
+            gasPrice:250000000000,
+            gasLimit:1000000,
             accounts: [`0x${PRIVATE_KEY}`]
         },
         tbsc: {

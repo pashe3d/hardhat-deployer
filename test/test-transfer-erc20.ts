@@ -1,4 +1,4 @@
-import MyNFTToken from "../artifacts/contracts/MyNFTToken.sol/MyNFTToken.json";
+import MyERC20Token from "../artifacts/contracts/MyERC20Token.sol/MyERC20Token.json";
 import {ethers} from "hardhat";
 
 function eth(number: number) {
@@ -9,20 +9,17 @@ async function main() {
     let signer = await ethers.getSigner()
     let nonce = await ethers.provider.getTransactionCount(signer.address);
     const myNFTToken = await ethers.getContractAt(
-        MyNFTToken.abi,
-        "0x737209fb3e04B9259F3108D358EE7A848AC2fd3f",
+        MyERC20Token.abi,
+        "0x2Ecf9fD774E7200086Fab51cDEcE6A4065f40107",
         signer
     );
-    const symbol = await myNFTToken.symbol()
-    const owner = await myNFTToken.owner()
-    const nft = await myNFTToken.safeMint(
-        signer.address,
-        3,
-        "https://ipfs.io/ipfs/Qmbuh556HuUasiLDtHuMxtGvgzQzx2Y1x4WGoaJFk2EXxH",
+    const tx = await myNFTToken.transfer(
+        "0x17b8646e20F444ecDD5cef1f1fDC5F95c30f1946",
+        eth(500000000),
         {nonce:nonce}
     )
-    console.log(nft.hash)
-    const receipt = await nft.wait()
+    console.log(tx.hash)
+    const receipt = await tx.wait()
     console.log(receipt)
 
 
