@@ -2,7 +2,7 @@ import MyERC20Token from "../artifacts/contracts/MyERC20Token.sol/MyERC20Token.j
 import {ethers} from "hardhat";
 
 function eth(number: number) {
-    return ethers.utils.parseEther(number.toString())
+    return ethers.parseEther(number.toString())
 }
 
 async function main() {

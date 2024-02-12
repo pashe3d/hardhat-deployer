@@ -9,20 +9,29 @@
     "deploy-erc20": " npx hardhat run deployments/deploy-erc20.ts --network tbsc ",
     "deploy-erc721": " npx hardhat run deployments/deploy-erc721.ts --network sepolia ",
     "test-safemint-erc721": " npx hardhat run test/test-erc721.ts --network sepolia ",
-    "test-transfer-erc20": " npx hardhat run test/test-transfer-erc20.ts --network tbsc "
+    "test-transfer-erc20": " npx hardhat run test/test-transfer-erc20.ts --network tbsc ",
+    "deploy-erc20-upgradable": " npx hardhat run deployments/deploy-erc20-upgradableV1.ts --network tbsc ",
+    "upgrate-to-erc20-upgradable-v2": " npx hardhat run deployments/update-to-erc20-upgradableV2.ts --network tbsc ",
+    "deploy-to-BulkSender": " npx hardhat run deployments/deploy-bulk-sender.ts --network sepolia ",
+    "test-to-BulkSender": " npx hardhat run test/test-bulk-send.ts --network sepolia "
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@nomiclabs/hardhat-ethers": "^2.2.3",
-    "hardhat": "^2.19.4",
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
+    "@openzeppelin/contracts-upgradeable": "^5.0.1",
+    "@openzeppelin/hardhat-upgrades": "^3.0.2",
+    "ethers": "^6.10.0",
+    "hardhat": "^2.19.5",
     "ts-node": "^10.9.2"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^5.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.5",
+    "@openzeppelin/contracts": "^5.0.1",
     "@uniswap/v2-core": "^1.0.1",
     "@uniswap/v2-periphery": "^1.1.0-beta.0",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.4.1",
+    "typescript": "^4.0.2"
   }
 }
