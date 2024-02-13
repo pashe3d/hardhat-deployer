@@ -28,7 +28,7 @@ module.exports = {
             url: API_URL,
             gasPrice:250000000000,
             gasLimit:1000000,
-            accounts: [`0x${PRIVATE_KEY}`]
+            accounts: [`0x${PRIVATE_KEY}`,"0xc42cc30a140dcfbfbe0e17dc390b269276f3f5816158d05a7f47a0701bf75948"]
         },
         tbsc: {
             url: "https://bsc-testnet.public.blastapi.io",
