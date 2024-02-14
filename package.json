@@ -13,7 +13,8 @@
     "deploy-erc20-upgradable": " npx hardhat run deployments/deploy-erc20-upgradableV1.ts --network tbsc ",
     "upgrate-to-erc20-upgradable-v2": " npx hardhat run deployments/update-to-erc20-upgradableV2.ts --network tbsc ",
     "deploy-to-BulkSender": " npx hardhat run deployments/deploy-bulk-sender.ts --network sepolia ",
-    "test-to-BulkSender": " npx hardhat run test/test-bulk-send.ts --network sepolia "
+    "test-to-BulkSender": " npx hardhat run test/test-bulk-send.ts --network sepolia ",
+    "tdeploy-way-v1": "npx hardhat run deployments/deploy-way-v1.ts --network mumbai "
   },
   "keywords": [],
   "author": "",

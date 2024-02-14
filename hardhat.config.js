@@ -34,6 +34,10 @@ module.exports = {
             url: "https://bsc-testnet.public.blastapi.io",
             gasPrice:30000000000,
             accounts: [`0x${PRIVATE_KEY}`]
+        },
+        mumbai: {
+            url: "https://polygon-mumbai-bor.publicnode.com",
+            accounts: [`0x${PRIVATE_KEY}`]
         }
     },
 }
